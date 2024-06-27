@@ -2,7 +2,7 @@
 title: "Dan Nolte"
 about:
   template: trestles
-  image: content/photos/headshot.jpg
+  image: content/photos/headshot.png
   image-width: 10em
   links:
     - icon: github
