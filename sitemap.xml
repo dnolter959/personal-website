@@ -2,10 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://dnolter959.github.io/personal-website/about.html</loc>
-    <lastmod>2024-06-27T18:42:39.922Z</lastmod>
+    <lastmod>2024-06-27T19:22:45.101Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dnolter959.github.io/personal-website/content/blog/overview.html</loc>
+    <lastmod>2024-06-27T19:22:45.101Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dnolter959.github.io/personal-website/content/projects/projects.html</loc>
+    <lastmod>2024-06-27T19:22:45.101Z</lastmod>
   </url>
   <url>
     <loc>https://dnolter959.github.io/personal-website/index.html</loc>
-    <lastmod>2024-06-27T18:42:39.930Z</lastmod>
+    <lastmod>2024-06-27T19:22:45.105Z</lastmod>
   </url>
 </urlset>

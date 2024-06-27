@@ -7,10 +7,30 @@
     "text": "About this site"
   },
   {
+    "objectID": "content/blog/overview.html",
+    "href": "content/blog/overview.html",
+    "title": "Blog",
+    "section": "",
+    "text": "This is mostly stats tutorials for the time being. The",
+    "crumbs": [
+      "Blog"
+    ]
+  },
+  {
+    "objectID": "content/projects/projects.html",
+    "href": "content/projects/projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "This is a selection of analytical projects I have completed either individually or as part of a small team.\n\n1. An R package for multiple imputation on longitudinal data\nIt turns out people don’t like completing surveys, especially longitudinal ones. What are you supposed to do with the half-data you are left with at the end? This R package implements a statistical method proposed by Moreno-Betancur and Chavance in their 2013 paper, which facilitates sensitivity analyses of Mixed Model results to various departures from the Missing at Random (MAR) assumption, in the presence of drop-out.\n\n\n2. A Python package for automatic differentiation\nHave you ever wanted to take a derivative, but with a computer? This Python package performs automatic differentiation of scalar or vector functions with scalar or vector inputs. The package can perform “forward” or “reverse” mode automatic differentiation.\n\n\n3. A Python data analysis on food access programs\nSome people do not have access to food they need to live healthy lives. The purpose of this analysis was to use publically available data sources to identify US counties which would be good targets for a government program to address poor food accesss. I sought to identify communities that would be well served by such a program, and also estimate the health impact of these programs.\n\n\n4. Understanding regularization in the presence of sparsity.\nRegularization is used within the context of linear regression to balance bias and variance and avoid overfitting. This paper details the results of a simulation study to investigate the performance of LASSO, Ridge, and Elastic Net approaches on model performance under a variety of conditions (e.g., high sparsity).",
+    "crumbs": [
+      "Projects"
+    ]
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "personal-website",
+    "title": "Dan Nolte",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "Welcome! Here’s a bit about me, professionally and otherwise:\n\nI have training math and economics (University of Rochester, BA) and biostatistics (Harvard, MS).\nI have 6+ years of work experience in economic consulting, data science, and medical research.\nI love solving problems with data, and communicating results through writing.\nWork is important to me! I hope to have a positive impact through the work that I do.\nI love running, reading, writing, and listening to podcasts.\nThese are a few of my favorite things."
   }
 ]
