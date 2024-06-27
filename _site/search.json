@@ -7,47 +7,13 @@
     "text": "About this site"
   },
   {
-    "objectID": "content/blog/posts/sql.html",
-    "href": "content/blog/posts/sql.html",
-    "title": "SQL Tutorial",
+    "objectID": "content/blog/overview.html",
+    "href": "content/blog/overview.html",
+    "title": "Blog",
     "section": "",
-    "text": "Note: ChatGPT (and others) are good at writing SQL queries if you prompt them well. Even so, if you use SQL, it’s important to know how where it comes from and how it works. I try to cover that here.",
+    "text": "This is mostly stats tutorials for the time being. The",
     "crumbs": [
-      "Blog",
-      "SQL Tutorial"
-    ]
-  },
-  {
-    "objectID": "content/blog/posts/sql.html#background",
-    "href": "content/blog/posts/sql.html#background",
-    "title": "SQL Tutorial",
-    "section": "Background",
-    "text": "Background\nSQL is a language that is used to query and manipulate data stored in relational databases. A relational database is just a set of tables that are related and share key information between them, allowing us to link them together to answer the questions we want to answer about the underlying data. It’s useful to think of these tables as excel spreadsheets, except they can be very large, they can be continuously updated, and you can extract highly specific information from them using code instead of filtering and formulas.\nBefore databases, we used to store information in physical media like file folders; this works until it doesn’t…if you have a lot of data it becomes a nightmare to modify it, update it, keep backups, and access it. Hence, SQL.\nSQL is important because data is important. If you are starting a company, for example, you need to keep track of your customers and their information, as well as other data pertaining to, say, your operations and employees. Once we store data in databases, we need to manage and access it efficiently, and so we developed the relational model and SQL.\nStoring data in tables is easy for us to understand and that we typically do so seems like a foregone conclusion, but it is not clearly the best or only way to do so. You can also store data in tree structures or network structures, and some data is still stored this way because its underlying nature is better captured in this way, or it is much more efficient to store it this way.\nSo-called NoSQL databases (e.g., MongoDB) also exist. NoSQL databases might replace clearly defined data tables with more flexibly defined, schema-less “collections” of records. The decision to use a NoSQL database vs. a relational data often has to do with data storage and performance considerations. I might tackle this in another post. But for now, onwards to SQL.",
-    "crumbs": [
-      "Blog",
-      "SQL Tutorial"
-    ]
-  },
-  {
-    "objectID": "content/blog/posts/sql.html#terminology",
-    "href": "content/blog/posts/sql.html#terminology",
-    "title": "SQL Tutorial",
-    "section": "Terminology",
-    "text": "Terminology\n\nPrimary key\n\nOne or more columns that can be used as the unique identifier for each row in a table\n\nForeign key\n\nOne or more columns that can be used to identify a single row in another table. A table has a foreign key if it contains a column (or set of columns) with values that may be duplicated, but these values uniquely identify a row in another table.\n\nResult set\n\nA nonpersistent table, normally the result of a SQL query",
-    "crumbs": [
-      "Blog",
-      "SQL Tutorial"
-    ]
-  },
-  {
-    "objectID": "content/blog/posts/sql.html#examples",
-    "href": "content/blog/posts/sql.html#examples",
-    "title": "SQL Tutorial",
-    "section": "Examples",
-    "text": "Examples\nThe best way to learn SQL is by working through many examples which increase incrementally in difficulty. I’ll do that below, adding comments and “gotchas” along the way as appropriate.\nFor most examples, I use the Sakila sample database. It is a built-in database in MySQL which includes data that would be relevant to a DVD rental store.\n\nI. Creating and modifying tables\n\n1. Create a table\n\nDROP TABLE IF EXISTS classes, student;\n\n\nCREATE TABLE student (\n  student_id SMALLINT UNSIGNED,\n  first_name VARCHAR(20),\n  last_name VARCHAR(20),\n  CONSTRAINT pk_student_id PRIMARY KEY (student_id)\n);\n\n\nDESC student;\n\n\n3 records\n\n\nField\nType\nNull\nKey\nDefault\nExtra\n\n\n\n\nstudent_id\nsmallint unsigned\nNO\nPRI\nNA\n\n\n\nfirst_name\nvarchar(20)\nYES\n\nNA\n\n\n\nlast_name\nvarchar(20)\nYES\n\nNA\n\n\n\n\n\n\n\nHere is one table called student. It has a primary key called student_id.\nI first delete the tables if they exist already or else I can’t create them on subsequent reruns of this code.\n\nNote that I must define the variable type for each variable, and I assign student_id to be the primary_key\n\n\nCREATE TABLE classes (\n  student_id SMALLINT UNSIGNED AUTO_INCREMENT,\n  class VARCHAR(20),\n  CONSTRAINT pk_student_class PRIMARY KEY (student_id, class),\n  CONSTRAINT fk_student_id FOREIGN KEY (student_id) REFERENCES student (student_id)\n);\n\n\nDESC classes;\n\n\n2 records\n\n\nField\nType\nNull\nKey\nDefault\nExtra\n\n\n\n\nstudent_id\nsmallint unsigned\nNO\nPRI\nNA\nauto_increment\n\n\nclass\nvarchar(20)\nNO\nPRI\nNA\n\n\n\n\n\n\n\nHere is another table called classes. It has a primary key that is the combination of two columns: student_id and class. Each student can have more than one class associated with them; but student_id-class combination is unique. This is a valid form a primary key (it’s called a compound key).\nI also add a constraint that the foreign key in this table is student_id. This is because while it may be repeated in this table; it uniquely identifies a row of the student table (its “parent” table). An implication of this constraint is that I cannot add a row to this table with a student_id that is not already in the student table.\nNote that first_name and last_name are not repeated here. While it might be useful to see those fields in the classes table but you should not add them here; As this information is already available in the student table, adding them here would be a redundancy and very much against the spirit of relational databases.\n\n\n\n2. Alter table\n\nALTER TABLE classes DROP FOREIGN KEY fk_student_id;\n\n\nALTER TABLE student MODIFY student_id SMALLINT UNSIGNED AUTO_INCREMENT;\n\n\nALTER TABLE classes ADD CONSTRAINT fk_student_id FOREIGN KEY (student_id) REFERENCES student(student_id);\n\n\nDESC student;\n\n\n3 records\n\n\nField\nType\nNull\nKey\nDefault\nExtra\n\n\n\n\nstudent_id\nsmallint unsigned\nNO\nPRI\nNA\nauto_increment\n\n\nfirst_name\nvarchar(20)\nYES\n\nNA\n\n\n\nlast_name\nvarchar(20)\nYES\n\nNA\n\n\n\n\n\n\n\nYou can alter tables as above. For example, I first removed the foreign key in the classes table, and then added an auto_increment to the student table, and then I added back the foreign key constraint in the classes table\n\n\n\n3. Populate table with data\n\nINSERT INTO student (student_id, first_name, last_name)\nVALUES \n  (null, \"Don\", \"Joe\"),\n  (null, \"Sam\", \"Jam\");\n\n\nSELECT * FROM student;\n\n\n2 records\n\n\nstudent_id\nfirst_name\nlast_name\n\n\n\n\n1\nDon\nJoe\n\n\n2\nSam\nJam\n\n\n\n\n\n\nINSERT INTO classes (student_id, class)\nVALUES \n  (1, \"Math\"),\n  (2, \"Math\"),\n  (2, \"Gym\");\n\n\nSELECT * FROM classes;\n\n\n3 records\n\n\nstudent_id\nclass\n\n\n\n\n1\nMath\n\n\n2\nGym\n\n\n2\nMath\n\n\n\n\n\n\n\n4. Update data\n\nUPDATE student \nSET last_name = \"Cow\"\nWHERE student_id = 1;\n\n\nSELECT * FROM student;\n\n\n2 records\n\n\nstudent_id\nfirst_name\nlast_name\n\n\n\n\n1\nDon\nCow\n\n\n2\nSam\nJam\n\n\n\n\n\n\n\n5. Delete data\n\nDELETE FROM classes \nWHERE student_id = 1;\n\n\nSELECT * FROM classes;\n\n\n2 records\n\n\nstudent_id\nclass\n\n\n\n\n2\nGym\n\n\n2\nMath\n\n\n\n\n\n\n\n\nII. Simple queries\n\n1. Output all data, limit records\n\nSELECT * FROM actor LIMIT 3;\n\n\n3 records\n\n\nactor_id\nfirst_name\nlast_name\nlast_update\n\n\n\n\n1\nPENELOPE\nGUINESS\n2006-02-15 04:34:33\n\n\n2\nNICK\nWAHLBERG\n2006-02-15 04:34:33\n\n\n3\nED\nCHASE\n2006-02-15 04:34:33\n\n\n\n\n\n\n\n2. Output some columns, limit records\n\nSELECT actor_id, first_name FROM actor LIMIT 3;\n\n\n3 records\n\n\nactor_id\nfirst_name\n\n\n\n\n1\nPENELOPE\n\n\n2\nNICK\n\n\n3\nED\n\n\n\n\n\n\n\n3. Output some columns and rows\n\nSELECT actor_id, first_name FROM actor WHERE actor_id = 2;\n\n\n1 records\n\n\nactor_id\nfirst_name\n\n\n\n\n2\nNICK\n\n\n\n\n\n\n\n4. Special select\n\nSELECT \n  'COMMON' AS lang,\n  language_id*23 AS lang_mult,\n  UPPER(name) AS lang_name\nFROM language;\n\n\n6 records\n\n\nlang\nlang_mult\nlang_name\n\n\n\n\nCOMMON\n23\nENGLISH\n\n\nCOMMON\n46\nITALIAN\n\n\nCOMMON\n69\nJAPANESE\n\n\nCOMMON\n92\nMANDARIN\n\n\nCOMMON\n115\nFRENCH\n\n\nCOMMON\n138\nGERMAN\n\n\n\n\n\n\n\n\nIII. Less simple queries",
-    "crumbs": [
-      "Blog",
-      "SQL Tutorial"
+      "Blog"
     ]
   },
   {
@@ -58,16 +24,6 @@
     "text": "This is a selection of analytical projects I have completed either individually or as part of a small team.\n\n1. An R package for multiple imputation on longitudinal data\nIt turns out people don’t like completing surveys, especially longitudinal ones. What are you supposed to do with the half-data you are left with at the end? This R package implements a statistical method proposed by Moreno-Betancur and Chavance in their 2013 paper, which facilitates sensitivity analyses of Mixed Model results to various departures from the Missing at Random (MAR) assumption, in the presence of drop-out.\n\n\n2. A Python package for automatic differentiation\nHave you ever wanted to take a derivative, but with a computer? This Python package performs automatic differentiation of scalar or vector functions with scalar or vector inputs. The package can perform “forward” or “reverse” mode automatic differentiation.\n\n\n3. A Python data analysis on food access programs\nSome people do not have access to food they need to live healthy lives. The purpose of this analysis was to use publically available data sources to identify US counties which would be good targets for a government program to address poor food accesss. I sought to identify communities that would be well served by such a program, and also estimate the health impact of these programs.\n\n\n4. Understanding regularization in the presence of sparsity.\nRegularization is used within the context of linear regression to balance bias and variance and avoid overfitting. This paper details the results of a simulation study to investigate the performance of LASSO, Ridge, and Elastic Net approaches on model performance under a variety of conditions (e.g., high sparsity).",
     "crumbs": [
       "Projects"
-    ]
-  },
-  {
-    "objectID": "content/blog/overview.html",
-    "href": "content/blog/overview.html",
-    "title": "Blog",
-    "section": "",
-    "text": "This is mostly stats tutorials for the time being. The",
-    "crumbs": [
-      "Blog"
     ]
   },
   {
