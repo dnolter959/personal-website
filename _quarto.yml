@@ -1,9 +1,12 @@
 project:
   type: website
 
+execute:
+  freeze: auto
+
 website:
   title: "Dan Nolte"
-  image: photos/headshot.jpg
+  image: photos/headshot.png
   navbar:
     background: "#F78734"
     search: true
