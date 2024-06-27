@@ -1,0 +1,6 @@
+---
+title: "Blog"
+format: html
+---
+
+This is mostly stats tutorials for the time being. The 

@@ -1,0 +1,18 @@
+---
+title: "Projects"
+format: html
+---
+
+This is a selection of analytical projects I have completed either individually or as part of a small team. 
+
+### 1. An R package for multiple imputation on longitudinal data
+It turns out people don't like completing surveys, especially longitudinal ones. What are you supposed to do with the half-data you are left with at the end? [This R package](https://github.com/dnolter959/longdrop2) implements a statistical method proposed by Moreno-Betancur and Chavance in their 2013 [paper](https://journals.sagepub.com/doi/10.1177/0962280213490014), which facilitates sensitivity analyses of Mixed Model results to various departures from the Missing at Random (MAR) assumption, in the presence of drop-out.
+
+### 2. A Python package for automatic differentiation
+Have you ever wanted to take a derivative, but with a computer? [This Python package](https://github.com/dnolter959/autodiff) performs automatic differentiation of scalar or vector functions with scalar or vector inputs. The package can perform "forward" or "reverse" mode automatic differentiation. 
+
+### 3. A Python data analysis on food access programs
+Some people do not have access to food they need to live healthy lives. The purpose of [this analysis](https://github.com/dnolter959/food_access_programs) was to use publically available data sources to identify US counties which would be good targets for a government program to address poor food accesss. I sought to identify communities that would be well served by such a program, and also estimate the health impact of these programs.
+
+### 4. Understanding regularization in the presence of sparsity. 
+Regularization is used within the context of linear regression to balance bias and variance and avoid overfitting. [This paper](content/regularization.pdf) details the results of a simulation study to investigate the performance of LASSO, Ridge, and Elastic Net approaches on model performance under a variety of conditions (e.g., high sparsity).

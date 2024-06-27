@@ -1,17 +1,37 @@
 project:
   type: website
-  output-dir: docs
-
-execute:
-  freeze: auto
 
 website:
-  title: "personal-website"
+  title: "Dan Nolte"
+  image: photos/headshot.jpg
   navbar:
+    background: "#F78734"
+    search: true
     left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+      - text: Home
+        href: index.qmd
+      - text: Blog
+        href: content/blog/overview.qmd
+      - text: Projects
+        href: content/projects/projects.qmd
+      - text: Resume
+        href: content/resume/resume.pdf
+
+  sidebar:
+    - title: "Blog"
+      style: "docked"
+      background: light
+      contents:
+        - content/blog/overview.qmd
+        - content/blog/posts/sql.qmd
+
+    - title: Projects
+      contents:
+        - content/projects/projects.qmd
+
+    - title: Resume
+      contents:
+        - content/resume/resume.pdf
 
 format:
   html:

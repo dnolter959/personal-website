@@ -1,7 +1,23 @@
 ---
-title: "personal-website"
+title: "Dan Nolte"
+about:
+  template: trestles
+  image: content/photos/headshot.jpg
+  image-width: 10em
+  links:
+    - icon: github
+      href: https://github.com/dnolter959
+    - icon: linkedin
+      href: https://www.linkedin.com/in/dansnolte/
+    - icon: envelope
+      href: mailto:dnolte@220@gmail.com
+
 ---
+Welcome! Here's a bit about me, professionally and otherwise:
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+- I have training math and economics (University of Rochester, BA) and biostatistics (Harvard, MS). 
+- I have 6+ years of work experience in economic consulting, data science, and medical research. 
+- I love solving problems with data, and communicating results through writing. 
+- Work is important to me! I hope to have a positive impact through the work that I do.
+- I love running, reading, writing, and listening to podcasts.
+- [These](https://open.spotify.com/playlist/4s8txG9rCi09HGedNuhcvM?si=118a8d3d8bee4a4d) are a few of my favorite things. 
