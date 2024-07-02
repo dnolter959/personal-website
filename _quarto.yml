@@ -13,7 +13,7 @@ website:
     left:
       - text: Home
         href: index.qmd
-      - text: Blog
+      - text: Words
         href: content/blog/overview.qmd
       - text: Projects
         href: content/projects/projects.qmd
@@ -21,12 +21,12 @@ website:
         href: content/resume/resume.pdf
 
   sidebar:
-    - title: "Blog"
+    - title: "Words"
       style: "docked"
       background: light
       contents:
         - content/blog/overview.qmd
-        - content/blog/posts/sql.qmd
+        - content/blog/identity.qmd
 
     - title: Projects
       contents:

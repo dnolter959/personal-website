@@ -1,6 +1,6 @@
 ---
-title: "Blog"
+title: "Words"
 format: html
 ---
 
-This is mostly stats tutorials for the time being. The 
+I try to write as much as I can because it is the best way I know to work through ideas and engage with the world around me. 

@@ -1,0 +1,15 @@
+{
+  "hash": "d17f95d22b944cd588071faff293a2b5",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Identity\"\nformat: html\ndate: \"2024-07-02 12:25:32.133487\"\n\n---\n\n::: {.cell}\n\n```{.r .cell-code}\n3+3\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 6\n```\n\n\n:::\n:::",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

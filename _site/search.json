@@ -9,11 +9,11 @@
   {
     "objectID": "content/blog/overview.html",
     "href": "content/blog/overview.html",
-    "title": "Blog",
+    "title": "Words",
     "section": "",
-    "text": "This is mostly stats tutorials for the time being. The",
+    "text": "I try to write as much as I can because it is the best way I know to work through ideas and engage with the world around me.",
     "crumbs": [
-      "Blog"
+      "Words"
     ]
   },
   {
@@ -32,5 +32,44 @@
     "title": "Dan Nolte",
     "section": "",
     "text": "Welcome! Here’s a bit about me, professionally and otherwise:\n\nI have training math and economics (University of Rochester, BA) and biostatistics (Harvard, MS).\nI have 6+ years of work experience in economic consulting, data science, and medical research.\nI love solving problems with data, and communicating results through writing.\nWork is important to me! I hope to have a positive impact through the work that I do.\nI love running, reading, writing, and listening to podcasts.\nThese are a few of my favorite things."
+  },
+  {
+    "objectID": "content/blog/things-i-love.html#poems",
+    "href": "content/blog/things-i-love.html#poems",
+    "title": "Things I Love",
+    "section": "Poems",
+    "text": "Poems"
+  },
+  {
+    "objectID": "content/blog/things-i-love.html#words",
+    "href": "content/blog/things-i-love.html#words",
+    "title": "Things I Love",
+    "section": "Words",
+    "text": "Words"
+  },
+  {
+    "objectID": "content/blog/things-i-love.html#movies",
+    "href": "content/blog/things-i-love.html#movies",
+    "title": "Things I Love",
+    "section": "Movies",
+    "text": "Movies"
+  },
+  {
+    "objectID": "content/blog/life-on-earth.html",
+    "href": "content/blog/life-on-earth.html",
+    "title": "Things I Love",
+    "section": "",
+    "text": "Music\n\n\nPoems\n\n\nWords\n\n\nMovies"
+  },
+  {
+    "objectID": "content/blog/identity.html",
+    "href": "content/blog/identity.html",
+    "title": "Identity",
+    "section": "",
+    "text": "3+3\n\n[1] 6",
+    "crumbs": [
+      "Words",
+      "Identity"
+    ]
   }
 ]
