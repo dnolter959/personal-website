@@ -13,7 +13,7 @@ about:
       href: mailto:dnolte@220@gmail.com
 
 ---
-Welcome! Here's a bit about me, professionally and otherwise:
+Hey! Here's a bit about me, professionally and otherwise:
 
 - I have training math and economics (University of Rochester, BA) and biostatistics (Harvard, MS). 
 - I have 6+ years of work experience in economic consulting, data science, and medical research. 
