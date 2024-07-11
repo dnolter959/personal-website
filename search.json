@@ -1,21 +1,10 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Dan Nolte",
     "section": "",
-    "text": "About this site"
-  },
-  {
-    "objectID": "content/blog/identity.html",
-    "href": "content/blog/identity.html",
-    "title": "Identity",
-    "section": "",
-    "text": "3+3\n\n[1] 6",
-    "crumbs": [
-      "Words",
-      "Identity"
-    ]
+    "text": "Hey! Here’s a bit about me, professionally and otherwise:\n\nI have training math and economics (University of Rochester, BA) and biostatistics (Harvard, MS).\nI have 6+ years of work experience in economic consulting, data science, and medical research.\nI love solving problems with data, and communicating results through writing.\nWork is important to me! I hope to have a positive impact through the work that I do.\nI love running, reading, writing, and listening to podcasts.\nThese are a few of my favorite things."
   },
   {
     "objectID": "content/projects/projects.html",
@@ -28,20 +17,32 @@
     ]
   },
   {
-    "objectID": "content/blog/overview.html",
-    "href": "content/blog/overview.html",
-    "title": "Words",
+    "objectID": "content/blog/favorites.html",
+    "href": "content/blog/favorites.html",
+    "title": "My Favorite Work",
     "section": "",
-    "text": "I try to write as much as I can because it is the best way I know to work through ideas and engage with the world around me.",
+    "text": "I’ve collected some of my favorite work here. For some, I include a comment on why I love them.\n\nLongform Journalism\n\n“The Friendship that Made Google Huge” by James Somers.\n“This Old Man” by Roger Angell.\n“Into the Lonely Quiet” by Eli Saslow.\n“The Art of Decision-Making” by Joshua Rothman.\n“The Crane Wife” by CJ Houser.\n\n\n\nPoems\n\n\nPodcast Episodes\n\n\nMovies\n\n\nBooks",
     "crumbs": [
-      "Words"
+      "Words",
+      "My Favorite Work"
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Dan Nolte",
+    "objectID": "content/blog/overview.html",
+    "href": "content/blog/overview.html",
+    "title": "Blog Posts",
     "section": "",
-    "text": "Welcome! Here’s a bit about me, professionally and otherwise:\n\nI have training math and economics (University of Rochester, BA) and biostatistics (Harvard, MS).\nI have 6+ years of work experience in economic consulting, data science, and medical research.\nI love solving problems with data, and communicating results through writing.\nWork is important to me! I hope to have a positive impact through the work that I do.\nI love running, reading, writing, and listening to podcasts.\nThese are a few of my favorite things."
+    "text": "Writing is important to me, for reasons that are well summarized here and here. In general, I think writing demands (and so, fosters) clear and rigorous thinking, and is an important avenue of creative expression. I use this blog to work through topics in statistics and comment on topics I find interesting.",
+    "crumbs": [
+      "Words",
+      "Blog Posts"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
   }
 ]
